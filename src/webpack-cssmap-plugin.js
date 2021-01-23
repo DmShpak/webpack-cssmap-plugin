@@ -1,5 +1,5 @@
 const { RawSource } = require('webpack-sources');
-const store = require('./css-map-store');
+const store = require('./cssmap-store');
 
 /**
  * Get cssmap from store and write to new asset

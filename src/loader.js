@@ -2,7 +2,7 @@
 
 const CssLoaderWithHooks = require("css-loader-with-hooks");
 const path = require("path");
-const store = require("./css-map-store");
+const store = require("./cssmap-store");
 
 const getRecord = (item) => {
     const record = {};
