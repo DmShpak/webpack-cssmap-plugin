@@ -1,0 +1,27 @@
+{
+  "name": "webpack-cssmap-plugin",
+  "version": "1.0.0",
+  "description": "Create class names map for css-loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmShpak/webpack-cssmap-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "css-loader"
+  ],
+  "author": "Dmytro Shpak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DmShpak/webpack-cssmap-plugin/issues"
+  },
+  "homepage": "https://github.com/DmShpak/webpack-cssmap-plugin#readme",
+  "dependencies": {
+    "css-loader-with-hooks": "^5.0.1",
+    "webpack-sources": "^2.2.0"
+  }
+}
