@@ -19,7 +19,7 @@ module.exports = {
             test: /.css$/,
             use: [
                 "style-loader",
-                loader: WebpackCssMapPlugin.CssLoader,
+                WebpackCssMapPlugin.CssLoader,
             ]
         }]
     },
