@@ -1,7 +1,6 @@
 "use strict"
 
 const CssLoaderWithHooks = require("css-loader-with-hooks");
-const path = require("path");
 const store = require("./cssmap-store");
 
 const getRecord = (item) => {
@@ -23,8 +22,7 @@ module.exports = function (...args) {
         originalOnExports && originalOnExports.apply(this, handlerArgs);
 
         const [item, loaderContext] = handlerArgs;
-        const key = path.relative(loaderContext.context, loaderContext.resourcePath);
-        store.add(key, getRecord(item));
+        store.add(loaderContext.resourcePath, getRecord(item));
     }
 
     return CssLoaderWithHooks.apply(this, args);
