@@ -13,15 +13,13 @@ class WebpackCssMapPlugin {
     }
 
     apply(compiler) {
-        compiler.hooks.compilation.tap("WebpackCssMapPlugin", (compilation) => {
-            compilation.hooks.additionalAssets.tap("WebpackCssMapPlugin", () => {
-                const path = this.options.path;
-                if (compilation.assets[path]) {
-                    this.errorAlreadyExists(path);
-                } else {
-                    compilation.assets[path] = this.getCssMapSource(compiler)
-                }
-            });
+        compiler.hooks.emit.tap("WebpackCssMapPlugin", (compilation) => {
+            const path = this.options.path;
+            if (compilation.assets[path]) {
+                this.errorAlreadyExists(path);
+            } else {
+                compilation.assets[path] = this.getCssMapSource(compiler)
+            }
         });
     }
 
